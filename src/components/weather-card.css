@@ -1,0 +1,42 @@
+.weather-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container-main {
+  font-size: 2rem;
+}
+
+.weather-card-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  list-style-type: none;
+  border: solid #fff 0.5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .weather-card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .weather-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

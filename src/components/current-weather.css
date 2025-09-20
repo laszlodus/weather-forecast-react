@@ -1,0 +1,23 @@
+.current-weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.current-weather-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  list-style-type: none;
+  border: solid #fff 0.5rem;
+}
+
+.weather-icon {
+  text-align: center;
+  font-size: 3rem;
+}
