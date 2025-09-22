@@ -8,7 +8,6 @@ export default function CurrentWeather({ weatherData }) {
     <section className="current-weather-container">
       <h1>Current Weather</h1>
       <ul className="current-weather-list">
-        <li>Today</li>
         {weatherData.current.rain > 0 && (
           <li>
             Rain: {weatherData.current.rain}

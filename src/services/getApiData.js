@@ -4,6 +4,5 @@ export async function getWeatherData(lat, lng) {
   );
   if (!res.ok) throw new Error("Api request failed!");
   const data = await res.json();
-  console.log(data);
   return data;
 }

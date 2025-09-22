@@ -13,10 +13,15 @@
   margin: 0.5rem;
   padding: 1rem;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   border-radius: 1rem;
   list-style-type: none;
   border: solid #fff 0.5rem;
+}
+
+.weekday {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 h1 {

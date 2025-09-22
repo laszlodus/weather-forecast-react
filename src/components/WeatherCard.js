@@ -10,13 +10,21 @@ export default function WeatherCard({ weatherData }) {
       <section className="weather-card-container">
         {weatherData.daily.time.map((day, index) => (
           <ul key={index} className="weather-card-list">
-            <li>
+            <li className="weekday">
               {new Date(weatherData.daily.time[index]).toLocaleDateString(
                 "en-GB",
                 {
                   weekday: "short",
                 }
               )}
+            </li>
+            <li>
+              {weatherData.daily.temperature_2m_max[index]}
+              {weatherData.daily_units.temperature_2m_max}
+            </li>
+            <li>
+              {weatherData.daily.temperature_2m_min[index]}
+              {weatherData.daily_units.temperature_2m_min}
             </li>
             {weatherData.daily.rain_sum[index] > 0 && (
               <li>
@@ -51,14 +59,6 @@ export default function WeatherCard({ weatherData }) {
                   minute: "2-digit",
                 }
               )}
-            </li>
-            <li>
-              {weatherData.daily.temperature_2m_max[index]}
-              {weatherData.daily_units.temperature_2m_max}
-            </li>
-            <li>
-              {weatherData.daily.temperature_2m_min[index]}
-              {weatherData.daily_units.temperature_2m_min}
             </li>
             <li>uv: {weatherData.daily.uv_index_max[index]}</li>
             <li>
