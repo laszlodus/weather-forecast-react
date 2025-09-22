@@ -91,7 +91,7 @@ function App() {
       <div className="main-container">
         {loading && <Loading />}
         {error && <ErrorComp />}
-        {!weatherData && error && (
+        {!weatherData && (
           <div className="current-location-container">
             <button
               className="current-location-btn"
