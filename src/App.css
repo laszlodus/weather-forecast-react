@@ -1,5 +1,60 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   max-width: 120rem;
   margin: 0 auto;
   padding: 1.5rem;
+  min-height: 100vh;
+  background-image: url(../public/weather.webp);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.message-style {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error-btn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(140, 223, 221);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-container {
+  flex: 1;
+}
+.current-location-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.current-location-btn {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(140, 223, 221);
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .App {
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 769px) {
+  .App {
+    background-attachment: fixed;
+  }
 }

@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Weather & Forecast App 🌤️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based weather application that allows users to check current weather conditions and a 7-day forecast for their location or any searched city.
 
-## Available Scripts
+🔍 Features
 
-In the project directory, you can run:
+Automatically loads weather data based on the user's current location
 
-### `npm start`
+Display current weather information and a 7-day forecast
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Search for any city to view its weather data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Error handling for invalid or unavailable locations
 
-### `npm test`
+Responsive and user-friendly UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dynamic icons for different weather conditions
 
-### `npm run build`
+🚀 Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+👉 Try it here: Weather & Forecast App
+(replace with actual Netlify link)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📦 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React
 
-### `npm run eject`
+JavaScript
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+HTML & CSS
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open-Meteo API (for weather and forecast data)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Geolocation API (for current location)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📂 Getting Started (for developers)
 
-## Learn More
+To run the project locally:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone https://github.com/laszlodus/weather-forecast.git
+cd weather-forecast
+npm install
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+About
 
-### Code Splitting
+Check current weather conditions and a 7-day forecast based on your location or any city you search for.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Resources
 
-### Analyzing the Bundle Size
+Open-Meteo API documentation: https://open-meteo.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+React documentation: https://reactjs.org
 
-### Making a Progressive Web App
+Languages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+JavaScript – 75%
 
-### Advanced Configuration
+CSS – 20%
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+HTML – 5%
 
-### Deployment
+Footer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2025 Laszlo Dus

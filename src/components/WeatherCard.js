@@ -11,25 +11,29 @@ export default function WeatherCard({ weatherData }) {
         {weatherData.daily.time.map((day, index) => (
           <ul key={index} className="weather-card-list">
             <li>
-              Date:{" "}
               {new Date(weatherData.daily.time[index]).toLocaleDateString(
-                "en-GB"
+                "en-GB",
+                {
+                  weekday: "short",
+                }
               )}
             </li>
+            {weatherData.daily.rain_sum[index] > 0 && (
+              <li>
+                <span>🌧️</span>
+                {weatherData.daily.rain_sum[index]}
+                {weatherData.daily_units.rain_sum}
+              </li>
+            )}
+            {weatherData.daily.snowfall_sum[index] > 0 && (
+              <li>
+                <span>❄️</span>
+                {weatherData.daily.snowfall_sum[index]}
+                {weatherData.daily_units.snowfall_sum}
+              </li>
+            )}
             <li>
-              Rain: {weatherData.daily.rain_sum[index]}
-              {weatherData.daily_units.rain_sum}
-            </li>
-            <li>
-              Showers: {weatherData.daily.showers_sum[index]}
-              {weatherData.daily_units.showers_sum}
-            </li>
-            <li>
-              Snowfall: {weatherData.daily.snowfall_sum[index]}
-              {weatherData.daily_units.snowfall_sum}
-            </li>
-            <li>
-              Sunrise:{" "}
+              <span>🌅</span>
               {new Date(weatherData.daily.sunrise[index]).toLocaleTimeString(
                 "en-GB",
                 {
@@ -39,7 +43,7 @@ export default function WeatherCard({ weatherData }) {
               )}
             </li>
             <li>
-              Sunset:{" "}
+              <span>🌇</span>
               {new Date(weatherData.daily.sunset[index]).toLocaleTimeString(
                 "en-GB",
                 {
@@ -49,16 +53,16 @@ export default function WeatherCard({ weatherData }) {
               )}
             </li>
             <li>
-              Temperature max: {weatherData.daily.temperature_2m_max[index]}
+              {weatherData.daily.temperature_2m_max[index]}
               {weatherData.daily_units.temperature_2m_max}
             </li>
             <li>
-              Temperature min: {weatherData.daily.temperature_2m_min[index]}
+              {weatherData.daily.temperature_2m_min[index]}
               {weatherData.daily_units.temperature_2m_min}
             </li>
-            <li>Uv index: {weatherData.daily.uv_index_max[index]}</li>
+            <li>uv: {weatherData.daily.uv_index_max[index]}</li>
             <li>
-              Wind speed: {weatherData.daily.wind_speed_10m_max[index]}
+              <span>🌬️</span> {weatherData.daily.wind_speed_10m_max[index]}
               {weatherData.daily_units.wind_speed_10m_max}
             </li>
             <li className="weather-icon">

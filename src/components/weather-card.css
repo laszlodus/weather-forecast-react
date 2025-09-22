@@ -4,7 +4,7 @@
 }
 
 .container-main {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .weather-card-list {
@@ -37,6 +37,6 @@ h1 {
 
 @media (min-width: 1440px) {
   .weather-card-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
 }

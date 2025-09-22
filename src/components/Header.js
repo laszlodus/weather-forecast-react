@@ -1,20 +1,12 @@
-import { useState } from "react";
+import Search from "./Search";
 import "./header.css";
 
-export default function Header() {
-  const [searchValue, setSearchValue] = useState("");
+export default function Header({ onSearch, city }) {
   return (
     <header className="header">
-      <h1>Weather and forecast app</h1>
-      <div className="input-btn-container">
-        <input
-          className="search-input"
-          value={searchValue}
-          placeholder="Search for location..."
-          onChange={(e) => setSearchValue(e.target.value)}
-        ></input>
-        <button className="search-btn">Search</button>
-      </div>
+      <h1>Weather and forecast</h1>
+      <Search onSearch={onSearch} />
+      <h2>{city}</h2>
     </header>
   );
 }
