@@ -19,7 +19,7 @@ Dynamic icons for different weather conditions
 🚀 Live Demo
 
 👉 Try it here: Weather & Forecast App
-weatherforecastld.netlify.app
+https://weatherforecastld.netlify.app/
 
 📦 Tech Stack
 
