@@ -1,5 +1,6 @@
 import "./weather-card.css";
 import { getWeatherIcon } from "../helpers/weatherHelper";
+import uvHelper from "../helpers/uvHelper";
 
 export default function WeatherCard({ weatherData }) {
   if (!weatherData) return null;
@@ -19,11 +20,11 @@ export default function WeatherCard({ weatherData }) {
               )}
             </li>
             <li>
-              {weatherData.daily.temperature_2m_max[index]}
+              {Math.round(weatherData.daily.temperature_2m_max[index])}
               {weatherData.daily_units.temperature_2m_max}
             </li>
             <li>
-              {weatherData.daily.temperature_2m_min[index]}
+              {Math.round(weatherData.daily.temperature_2m_min[index])}
               {weatherData.daily_units.temperature_2m_min}
             </li>
             {weatherData.daily.rain_sum[index] > 0 && (
@@ -60,9 +61,12 @@ export default function WeatherCard({ weatherData }) {
                 }
               )}
             </li>
-            <li>uv: {weatherData.daily.uv_index_max[index]}</li>
             <li>
-              <span>🌬️</span> {weatherData.daily.wind_speed_10m_max[index]}
+              uv: {uvHelper(Math.round(weatherData.daily.uv_index_max[index]))}
+            </li>
+            <li>
+              <span>🌬️</span>{" "}
+              {Math.round(weatherData.daily.wind_speed_10m_max[index])}
               {weatherData.daily_units.wind_speed_10m_max}
             </li>
             <li className="weather-icon">

@@ -8,6 +8,10 @@ export default function CurrentWeather({ weatherData }) {
     <section className="current-weather-container">
       <h1>Current Weather</h1>
       <ul className="current-weather-list">
+        <li>
+          {Math.round(weatherData.current.temperature_2m)}
+          {weatherData.current_units.temperature_2m}
+        </li>
         {weatherData.current.rain > 0 && (
           <li>
             Rain: {weatherData.current.rain}
@@ -21,12 +25,8 @@ export default function CurrentWeather({ weatherData }) {
           </li>
         )}
         <li>
-          {weatherData.current.temperature_2m}
-          {weatherData.current_units.temperature_2m}
-        </li>
-        <li>
           <span>🌬️</span>
-          {weatherData.current.wind_speed_10m}
+          {Math.round(weatherData.current.wind_speed_10m)}
           {weatherData.current_units.wind_speed_10m}
         </li>
         <div className="weather-icon">
